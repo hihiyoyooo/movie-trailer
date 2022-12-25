@@ -1,5 +1,4 @@
 import { ThemeProvider } from "styled-components";
-import Axios from "./apis/@core";
 import LayoutHeader from "./components/Layout/header/Header";
 import HomePage from "./pages/Home";
 import GlobalStyles from "./styles/global";

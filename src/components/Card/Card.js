@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import ReplaceImage from "../../assets/imgs/unknown.png";
-import MovieList from "../../pages/components/MovieList/MovieList";
 import { flexCenter } from "../../styles/common";
 
 function MovieCard({ movie }) {
@@ -14,7 +13,7 @@ function MovieCard({ movie }) {
         } else {
             setMovieOverView(movieOverView);
         }
-    }, [movie]);
+    }, [movie, movieOverView]);
 
     return (
         <div>
@@ -26,6 +25,7 @@ function MovieCard({ movie }) {
                                 ? IMAGE_URL.current + movie.poster_path
                                 : ReplaceImage
                         }
+                        alt="car"
                     />
                 </S.Poster>
                 <S.DescBox>

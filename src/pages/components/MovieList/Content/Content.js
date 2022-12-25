@@ -19,7 +19,7 @@ function MoveieListContent() {
     useEffect(() => {
         if (!inView || isFetching) return;
         fetchNextPage();
-    }, [inView]);
+    }, [inView, fetchNextPage, isFetching]);
 
     return (
         <S.Wrapper>
